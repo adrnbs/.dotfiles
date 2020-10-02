@@ -502,7 +502,7 @@ bar {
 
 # Start the installed regolith-compositor
 set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/regolith-compositor/init
-exec --no-startup-id $i3-wm.program.compositor
+exec --no-startup-id picom --xrender-sync-fence --experimental-backends --vsync --config ~/.config/regolith/compton/config
 
 # Start Rofication for notifications
 set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
