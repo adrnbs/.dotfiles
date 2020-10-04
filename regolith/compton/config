@@ -96,10 +96,9 @@ shadow-ignore-shaped = false;
 # Opacity
 #
 #################################
-
-inactive-opacity = .9;
+inactive-opacity = .8;
 active-opacity = .9;
-frame-opacity = .9;
+frame-opacity = .8;
 inactive-opacity-override = false;
 
 # Dim inactive windows. (0.0 - 1.0)
