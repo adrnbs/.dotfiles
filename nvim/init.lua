@@ -7,6 +7,16 @@
 --vim.g.mapleader = ","
 --vim.g.localleader = "\\"
 
+-- On new machines without packer, the following must be executed for
+-- other plugins to initialize and download:
+--
+-- 1. Clone packer and install it: 
+-- git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+-- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+--
+-- 2. Ensure packer is included within the plug.lua (or equivalent) file.
+-- See lua/plug.lua #initialize tag content for information.
+
 vim.cmd "colorscheme catppuccin"
 
 -- IMPORTS

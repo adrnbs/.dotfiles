@@ -2,7 +2,11 @@
 
 return require('packer').startup(function(use)
   -- [[ Plugins Go Here ]]
+
+  -- #initialize -- required for packer to manage itself
   use 'wbthomason/packer.nvim'
+  -- #initialize
+
   use { "williamboman/mason.nvim" }
   use {
       'nvim-treesitter/nvim-treesitter',
@@ -33,35 +37,6 @@ return require('packer').startup(function(use)
 		vim.api.nvim_command "colorscheme catppuccin"
 	end
   }
-
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-
-  use {
-    "nvim-neorg/neorg",
-    tag = "*",
-    after = "nvim-treesitter", -- You may want to specify Telescope here as well
-    config = function()
-        require('neorg').setup {
-            load = {
-                ["core.defaults"] = {}, -- Loads default behaviour
-                ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.norg.dirman"] = { -- Manages Neorg workspaces
-                    config = {
-                        workspaces = {
-                            notes = "~/Documents/work/notes",
-                        },
-                    },
-                },
-            },
-        }
-    end,
-    run = ":Neorg sync-parsers",
-    requires = "nvim-lua/plenary.nvim",
-
-}
 
 -- MarkdownPreview
 -- install without yarn or npm
