@@ -19,6 +19,10 @@
 
 vim.cmd "colorscheme catppuccin"
 
+-- Set browser for markdown-preview package
+vim.cmd([[
+    let g:mkdp_browser = '/usr/bin/firefox-bin'
+]])
 -- IMPORTS
 require('vars')		-- Variables
 require('opts')		-- Options
