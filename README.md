@@ -64,7 +64,7 @@ Requires a functionally complete nerd font, unless fonts are replaced with your 
 Current mpv configuration is not entirely hammered out, but allows a nice cache threshold to avoid buffering, and is HQ. Videos start paused.
 
 ### key points
-- Uses `mpv 'link` via terminal to execute
+- Uses `mpv 'link'` via terminal to execute
 - Unfinished videos are stored within `~/.config/mpv/watch_later` via files containing metadata, but must be enabled within config
 - `mpv` has a specific opacity rule within `~/.config/picom/picom.conf` where mpv will not be transparent even when unfocused, update to taste
 
