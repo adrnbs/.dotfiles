@@ -19,32 +19,27 @@
 
 vim.cmd "colorscheme catppuccin"
 
--- Set browser for markdown-preview package
+-- Set browser for markdown-preview server
 vim.cmd([[
     let g:mkdp_browser = '/usr/bin/firefox-bin'
 ]])
--- IMPORTS
-require('vars')		-- Variables
-require('opts')		-- Options
-require('keys')	    -- Keymaps
-require('plug')	    -- Plugins
-require('cat')      -- Catppuccin
-require('tree')     -- Nvim-tree
-require('config.lualine') -- Configuration for lualine
 
--- PLUGINS
-require('nvim-tree').setup{}
+-- Imports
+require('core.vars')            		-- Variables
+require('core.opts')		            -- Options
+require('core.keys')	                -- Keymaps
+require('core.plugins')	                -- Plugins
+require('core.plugin-config.cat')       -- Catppuccin
+require('core.plugin-config.tree')      -- Nvim-tree
+require('core.plugin-config.completions') -- LSP
+require('core.plugin-config.lsp-config')
+require('core.plugin-config.telescope')
+require('core.plugin-config.lualine')
 
-require('lualine').setup {
-	options = {
-		theme = "catppuccin"
-	}
+require('nvim-tree').setup {}
+
+require('lualine').setup { -- Configuration for lualine
+    options = {
+        theme = "catppuccin"
+    }
 }
-
--- LSP
-require('mason').setup{}
-require'lspconfig'.terraformls.setup{}
---vim.api.nvim_create_autocmd({"BufWritePre"}, {
---  pattern = {"*.tf", "*.tfvars"},
---  callback = vim.lsp.buf.formatting_sync
---})
