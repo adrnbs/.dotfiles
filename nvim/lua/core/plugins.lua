@@ -1,7 +1,6 @@
--- [[ plug.lua ]]
+-- [[ plugins.lua ]]
 
 return require('packer').startup(function(use)
-  -- [[ Plugins Go Here ]]
 
   -- #initialize -- required for packer to manage itself
   use 'wbthomason/packer.nvim'
@@ -18,6 +17,10 @@ return require('packer').startup(function(use)
   use 'mhinz/vim-startify'
   use 'danilamihailov/beacon.nvim'
 
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
 
   use {
     'nvim-telescope/telescope.nvim',
