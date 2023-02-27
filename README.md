@@ -30,7 +30,7 @@ awful.key({ altkey, "Control" }, "l" function () awful.spawn.with_shell("slock")
 
 - Print screen specifically set as well, utilizing `scrot` - update if not using `scrot`
 - `picom` and `fehbg` are set to run automatically with awesomewm, update if necessary
--- `fehbg` is a custom script to handle the loading of the wallpaper. To utilize this functionality execute the following:
+- `fehbg` is a custom script to handle the loading of the wallpaper. To utilize this functionality execute the following:
 ```bash
 # make sure you have feh, on gentoo this is
 sudo emerge -av media-gfx/feh
