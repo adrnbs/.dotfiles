@@ -7,12 +7,19 @@ return require('packer').startup(function(use)
   -- #initialize
 
   use 'williamboman/mason.nvim'
+  -- LSP
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
+  -- Completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
+  -- Project browser
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
+  -- Misc
   use 'nvim-lualine/lualine.nvim'
   use 'mhinz/vim-startify'
   use 'danilamihailov/beacon.nvim'
