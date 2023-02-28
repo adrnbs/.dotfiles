@@ -3,7 +3,8 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = { "lua_ls",
-                         "terraformls" }
+                         "terraformls",
+                         "gopls" }
 })
 
 local on_attach = function(_, _)
@@ -23,6 +24,10 @@ require("lspconfig").lua_ls.setup {
     capabilities = capabilities,
 }
 require("lspconfig").terraformls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+require("lspconfig").gopls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
