@@ -71,7 +71,7 @@ Current mpv configuration is not entirely hammered out, but allows a nice cache 
 ## neovim
 ![nvim](https://user-images.githubusercontent.com/15268681/221452926-d650e9f2-1eca-4e35-bdf8-7729704b7fb8.png)
 
-I will save myself the trouble of going into depth here, but it easier to understand than the emacs configuration. A good point of reference is `~/.config/nvim/lua/keys.lua` which will explain keybinds.
+I will save myself the trouble of going into depth here, but it easier to understand than the emacs configuration. A good point of reference is `~/.config/nvim/lua/core/keys.lua` which will explain keybinds.
 
 ### notes
 - Theme support build in via catppuccin mocha
