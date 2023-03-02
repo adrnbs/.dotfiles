@@ -99,7 +99,7 @@ Note that `ranger` incurs blur from `picom` - can be added to list of excluded a
 A useful answer to managing multiple terminals at once, complete with vim keybindings to and from nvim.
 
 ### notes
-- <C-h/j/k/l> moves panes
-- <C-s> leader key
-- Run <C-s> + I to install plugins
-- Run <C-s> + r to source tmux config
+- C-h/j/k/l moves panes
+- C-s leader key
+- Run C-s + I to install plugins
+- Run C-s + r to source tmux config
