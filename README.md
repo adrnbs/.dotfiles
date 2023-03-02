@@ -94,3 +94,12 @@ Note that `ranger` incurs blur from `picom` - can be added to list of excluded a
 - Relies on `ueberzug` for image display preview; make sure it is installed
 - Uses `dragon` for drag and drop functionality, can be activated by `<Ctrl-d>` or by navigating all the way to the file via `l`
 - Allows functionality into web pages that may support file drag and drop
+
+## tmux
+A useful answer to managing multiple terminals at once, complete with vim keybindings to and from nvim.
+
+### notes
+- <C-h/j/k/l> moves panes
+- <C-s> leader key
+- Run <C-s> + I to install plugins
+- Run <C-s> + r to source tmux config
