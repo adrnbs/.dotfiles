@@ -57,10 +57,10 @@ keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
 -- Moving windows
-keymap("n", "<A-h>", ":wincmd h<CR>", default_opts)
-keymap("n", "<A-j>", ":wincmd j<CR>", default_opts)
-keymap("n", "<A-k>", ":wincmd k<CR>", default_opts)
-keymap("n", "<A-l>", ":wincmd l<CR>", default_opts)
+--keymap("n", "<A-h>", ":wincmd h<CR>", default_opts)
+--keymap("n", "<A-j>", ":wincmd j<CR>", default_opts)
+--keymap("n", "<A-k>", ":wincmd k<CR>", default_opts)
+--keymap("n", "<A-l>", ":wincmd l<CR>", default_opts)
 
 -- Misc / Quality of life
 keymap("n", "<A-g>", ":close<CR>", default_opts)

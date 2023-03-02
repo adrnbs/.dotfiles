@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'mhinz/vim-startify'
   use 'danilamihailov/beacon.nvim'
+  use 'christoomey/vim-tmux-navigator'
 
   use {
       'nvim-treesitter/nvim-treesitter',
