@@ -64,3 +64,5 @@ keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
 -- Misc / Quality of life
 keymap("n", "<A-g>", ":close<CR>", default_opts)
+-- Allow command during insert mode, but can just use C-\ C-o
+--keymap("i", "<C-o>", ":ins-special-special<CR>", default_opts)
