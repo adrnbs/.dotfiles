@@ -1,0 +1,3 @@
+#!/bin/sh
+# Script dumped into /usr/bin/fehbg
+feh --no-fehbg --bg-scale '/home/adorn/.walls/current.jpg' 
