@@ -4,6 +4,8 @@ Collection of configurations from a Gentoo based system. Some tool configuration
 
 These configurations rely specifically on x11 as the display server, as well as OpenRC rather than systemd.
 
+## As of July 2023 any additions should be considered WIP - in the process of swapping to Wayland over X.
+
 ### tools
 - WM: [awesome](https://awesomewm.org/)
 - Term: [kitty](https://sw.kovidgoyal.net/kitty/)
