@@ -17,7 +17,7 @@
 -- 2. Ensure packer is included within the plug.lua (or equivalent) file.
 -- See lua/plug.lua #initialize tag content for information.
 
-vim.cmd "colorscheme catppuccin"
+vim.cmd('colorscheme embark')
 
 -- Set browser for markdown-preview server
 vim.cmd([[
@@ -29,7 +29,6 @@ require('core.vars')            		-- Variables
 require('core.opts')		            -- Options
 require('core.keys')	                -- Keymaps
 require('core.plugins')	                -- Plugins
-require('core.plugin-config.cat')       -- Catppuccin
 require('core.plugin-config.tree')      -- Nvim-tree
 require('core.plugin-config.completions') -- LSP
 require('core.plugin-config.lsp-config')
@@ -37,9 +36,3 @@ require('core.plugin-config.telescope')
 require('core.plugin-config.lualine')
 
 require('nvim-tree').setup {}
-
-require('lualine').setup { -- Configuration for lualine
-    options = {
-        theme = "catppuccin"
-    }
-}

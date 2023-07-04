@@ -36,15 +36,17 @@ return require('packer').startup(function(use)
     requires = {{ 'nvim-lua/plenary.nvim' }}
   }
 
-  use {                                              -- latte, frappe, macchiato, mocha
-  	"catppuccin/nvim",
-	as = "catppuccin",
-	config = function()
-		vim.g.catppuccin_flavour = "mocha"
-		require("catppuccin").setup()
-		vim.api.nvim_command "colorscheme catppuccin"
-	end
-  }
+  use { 'embark-theme/vim', as = 'embark' }
+
+--  use {                                              -- latte, frappe, macchiato, mocha
+--  	"catppuccin/nvim",
+--	as = "catppuccin",
+--	config = function()
+--		vim.g.catppuccin_flavour = "mocha"
+--		require("catppuccin").setup()
+--		vim.api.nvim_command "colorscheme catppuccin"
+--	end
+--  }
 
   use({
     "iamcco/markdown-preview.nvim",
