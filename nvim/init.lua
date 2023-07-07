@@ -1,23 +1,19 @@
 --[[ init.lua ]]
---
 
--- LEADER
--- These keybindings need to be defined before the first /
--- is called; otherwise, it will default to "\"
---vim.g.mapleader = ","
---vim.g.localleader = "\\"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- On new machines without packer, the following must be executed for
--- other plugins to initialize and download:
---
--- 1. Clone packer and install it: 
--- git clone --depth 1 https://github.com/wbthomason/packer.nvim\
--- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
---
--- 2. Ensure packer is included within the plug.lua (or equivalent) file.
--- See lua/plug.lua #initialize tag content for information.
-
-vim.cmd('colorscheme embark')
+vim.g.mapleader = ","
 
 -- Set browser for markdown-preview server
 vim.cmd([[
@@ -28,7 +24,7 @@ vim.cmd([[
 require('core.vars')            		-- Variables
 require('core.opts')		            -- Options
 require('core.keys')	                -- Keymaps
-require('core.plugins')	                -- Plugins
+require('core.plugins')
 require('core.plugin-config.tree')      -- Nvim-tree
 require('core.plugin-config.completions') -- LSP
 require('core.plugin-config.lsp-config')
@@ -36,3 +32,11 @@ require('core.plugin-config.telescope')
 require('core.plugin-config.lualine')
 
 require('nvim-tree').setup {}
+
+vim.cmd.colorscheme "poimandres"
+
+-- Remove eob default `~`
+-- My head hurts
+vim.cmd([[
+    set fillchars=eob:\ 
+]])
