@@ -3,9 +3,6 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
---keymap('n', ',', '', {})
-vim.g.mapleader = ','
-
 -- Toggle nvim-tree
 keymap("n", "<leader>n", ":NvimTreeToggle<CR>",{})
 
@@ -16,14 +13,6 @@ keymap("n", "<leader>m", ":MarkdownPreviewToggle<CR>",{})
 keymap("i", "jk", "<ESC>", default_opts)
 keymap("t", "jk", "<C-\\><C-n>", default_opts)
 
--- Center search results
---keymap("n", "n", "nzz", default_opts)
---keymap("n", "N", "Nzz", default_opts)
-
--- Visual line wraps
---keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
---keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
-
 -- Better indent
 keymap("v", "<", "<gv", default_opts)
 keymap("v", ">", ">gv", default_opts)
@@ -31,13 +20,8 @@ keymap("v", ">", ">gv", default_opts)
 -- Paste over currently selected text without yanking it
 keymap("v", "p", '"_dP', default_opts)
 
--- Paste
--- keymap("v", "P", '"+p', default_opts)
-
 -- Copy 
 keymap("v", "c", '"*y', default_opts)
--- Copy to system clipboard in visual mode
---keymap("v", "<C-c>", '"+y', default_opts)
 
 -- Switch buffer
 keymap("n", "<S-h>", ":bprevious<CR>", default_opts)
@@ -55,12 +39,6 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
-
--- Moving windows
---keymap("n", "<A-h>", ":wincmd h<CR>", default_opts)
---keymap("n", "<A-j>", ":wincmd j<CR>", default_opts)
---keymap("n", "<A-k>", ":wincmd k<CR>", default_opts)
---keymap("n", "<A-l>", ":wincmd l<CR>", default_opts)
 
 -- Misc / Quality of life
 keymap("n", "<A-g>", ":close<CR>", default_opts)
