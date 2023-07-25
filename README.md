@@ -1,18 +1,15 @@
 # .dotfiles
-![base](https://user-images.githubusercontent.com/15268681/221452886-b70ed81e-87c3-43ae-86a6-362a7dd4c8b8.png)
+![base](https://i.imgur.com/o1YUV67.jpg)
 Collection of configurations from a Gentoo based system. Some tool configurations will require changes based on system browser, lock screen, etc. I will mention the items to be updated, per section, but should not be used as an all inclusive list and are subject to change. Some changes may be explicitly noted in tool configuration `.conf` files, but will be mentioned for posterity here as well.
 
-These configurations rely specifically on x11 as the display server, as well as OpenRC rather than systemd.
-
-## As of July 2023 any additions should be considered WIP - in the process of swapping to Wayland over X.
-
 ### tools
-- WM: [awesome](https://awesomewm.org/)
-- Term: [kitty](https://sw.kovidgoyal.net/kitty/)
+- WM: hyprland
+- Term: foot
 - Media: [mpv](https://mpv.io/)
 - Code/notes: [nvim](https://neovim.io/)
-- Compositor: [picom](https://github.com/jonaburg/picom) (specifically jonaburg fork)
 - Files: [ranger](https://github.com/ranger/ranger)
+
+## TODO 2023/25/07 Rework README
 
 # configurations
 ## awesome
