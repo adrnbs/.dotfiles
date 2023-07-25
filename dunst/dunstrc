@@ -126,6 +126,9 @@
     # font height, it will get raised to the font height.
     line_height = 0
 
+    background = "#1F2D3A"
+    foreground = "#1ABC9C"
+
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
     #        <b>bold</b>
