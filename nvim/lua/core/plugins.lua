@@ -12,7 +12,7 @@ require('lazy').setup({
   'saadparwaiz1/cmp_luasnip',
   'rafamadriz/friendly-snippets',
   -- Project browser
-  'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-tree.lua', -- g? for mappings
   'nvim-tree/nvim-web-devicons',
   -- Misc
   'nvim-lualine/lualine.nvim',
