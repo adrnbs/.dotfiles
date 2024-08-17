@@ -1,5 +1,7 @@
 --[[ task.lua ]]
 
+--[[ task.lua ]]
+
 local function capture_task()
     -- Function to get user input and clear the command line
     local function get_input(prompt)
@@ -24,8 +26,8 @@ local function capture_task()
         return
     end
 
-    -- Prepare the task entry with a checkbox for the Outcome
-    local task_entry = string.format("- [ ] %s\n  - Next Action: %s\n\n", outcome, next_action)
+    -- Prepare the task entry with the Outcome as a header
+    local task_entry = string.format("## %s\n- Next Action: %s\n\n", outcome, next_action)
 
     -- Set the file path
     local file_path = vim.fn.expand("~/Documents/tasks/capture.md")
