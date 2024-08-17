@@ -1,7 +1,5 @@
 --[[ task.lua ]]
 
---[[ task.lua ]]
-
 local function capture_task()
     -- Function to get user input and clear the command line
     local function get_input(prompt)
