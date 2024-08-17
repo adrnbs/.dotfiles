@@ -24,6 +24,7 @@ vim.cmd([[
 require('core.vars')            		-- Variables
 require('core.opts')		            -- Options
 require('core.keys')	                -- Keymaps
+require('core.task')
 require('core.plugins')
 require('core.plugin-config.tree')      -- Nvim-tree
 require('core.plugin-config.completions') -- LSP
@@ -33,10 +34,7 @@ require('core.plugin-config.lualine')
 
 require('nvim-tree').setup {}
 
-vim.cmd.colorscheme "poimandres"
-
 -- Remove eob default `~`
--- My head hurts
 vim.cmd([[
     set fillchars=eob:\ 
 ]])
