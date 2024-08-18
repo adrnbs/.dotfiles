@@ -54,4 +54,3 @@ vim.api.nvim_set_keymap("n", "<Leader>t", ":CaptureTask<CR>", {noremap = true, s
 
 -- Set up the key mapping for opening the capture.md file
 vim.api.nvim_set_keymap("n", "<Leader>ot", ":edit ~/Documents/notes/pages/inbox.md<CR>", {noremap = true, silent = true})
-
