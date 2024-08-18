@@ -3,6 +3,7 @@
 local function capture_task()
     -- Function to get user input and clear the command line
     local function get_input(prompt)
+        vim.api.nvim_out_write("\n") -- Add a newline before the prompt
         local input = vim.fn.input(prompt .. " (or 'qq' to quit): ")
         vim.cmd("normal! :") -- Clear the command line
         return input
@@ -24,11 +25,11 @@ local function capture_task()
         return
     end
 
-    -- Prepare the task entry with the Outcome as a header
-    local task_entry = string.format("## %s\n- **Next Action**: %s\n\n", outcome, next_action)
+    -- Prepare the task entry with a level 3 header for the Outcome and nested Next Action
+    local task_entry = string.format("\n### %s\n\t- %s\n", outcome, next_action)
 
     -- Set the file path
-    local file_path = vim.fn.expand("~/Documents/tasks/capture.md")
+    local file_path = vim.fn.expand("~/Documents/notes/pages/inbox.md")
 
     -- Ensure the directory exists
     vim.fn.mkdir(vim.fn.fnamemodify(file_path, ":h"), "p")
@@ -52,4 +53,4 @@ vim.api.nvim_create_user_command("CaptureTask", capture_task, {})
 vim.api.nvim_set_keymap("n", "<Leader>t", ":CaptureTask<CR>", {noremap = true, silent = true})
 
 -- Set up the key mapping for opening the capture.md file
-vim.api.nvim_set_keymap("n", "<Leader>ot", ":edit ~/Documents/tasks/capture.md<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Leader>ot", ":edit ~/Documents/notes/pages/inbox.md<CR>", {noremap = true, silent = true})
