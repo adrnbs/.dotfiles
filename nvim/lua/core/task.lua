@@ -25,7 +25,7 @@ local function capture_task()
     end
 
     -- Prepare the task entry with the Outcome as a header
-    local task_entry = string.format("## %s\n- Next Action: %s\n\n", outcome, next_action)
+    local task_entry = string.format("## %s\n- **Next Action**: %s\n\n", outcome, next_action)
 
     -- Set the file path
     local file_path = vim.fn.expand("~/Documents/tasks/capture.md")
