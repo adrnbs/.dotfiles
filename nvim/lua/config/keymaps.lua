@@ -1,17 +1,17 @@
---[[ keys.lua ]]
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
-local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- Toggle nvim-tree
-keymap("n", "<leader>n", ":NvimTreeToggle<CR>",{})
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+keymap("n", "<leader>fe", "<cmd>NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
 
--- MarkdownPreview
-keymap("n", "<leader>m", ":MarkdownPreviewToggle<CR>",{})
-
--- Better escape using jk in insert and terminal mode
-keymap("i", "jk", "<ESC>", default_opts)
-keymap("t", "jk", "<C-\\><C-n>", default_opts)
+-- Peek 
+keymap("n", "<leader>po", ":PeekOpen<CR>",{})
+keymap("n", "<leader>pc", ":PeekClose<CR>",{})
 
 -- Better indent
 keymap("v", "<", "<gv", default_opts)
@@ -39,8 +39,3 @@ keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
-
--- Misc / Quality of life
-keymap("n", "<A-g>", ":close<CR>", default_opts)
--- Allow command during insert mode, but can just use C-\ C-o
---keymap("i", "<C-o>", ":ins-special-special<CR>", default_opts)

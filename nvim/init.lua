@@ -1,40 +1,27 @@
---[[ init.lua ]]
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
+require("config.task")
+require("plugins.plugins")
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
+require('peek').setup({
+  auto_load = true,         -- whether to automatically load preview when
+                            -- entering another markdown buffer
+  close_on_bdelete = true,  -- close preview window on buffer delete
 
-vim.g.mapleader = ","
+  syntax = true,            -- enable syntax highlighting, affects performance
 
--- Set browser for markdown-preview server
-vim.cmd([[
-    let g:mkdp_browser = '/usr/bin/firefox-bin'
-]])
+  theme = 'dark',           -- 'dark' or 'light'
 
--- Imports
-require('core.vars')            		-- Variables
-require('core.opts')		            -- Options
-require('core.keys')	                -- Keymaps
-require('core.task')
-require('core.plugins')
-require('core.plugin-config.tree')      -- Nvim-tree
-require('core.plugin-config.completions') -- LSP
-require('core.plugin-config.lsp-config')
-require('core.plugin-config.telescope')
-require('core.plugin-config.lualine')
+  update_on_change = true,
 
-require('nvim-tree').setup {}
+  app = 'browser',          -- 'webview', 'browser', string or a table of strings
+                            -- explained below
 
--- Remove eob default `~`
-vim.cmd([[
-    set fillchars=eob:\ 
-]])
+  filetype = { 'markdown' },-- list of filetypes to recognize as markdown
+
+  -- relevant if update_on_change is true
+  throttle_at = 200000,     -- start throttling when file exceeds this
+                            -- amount of bytes in size
+  throttle_time = 'auto',   -- minimum amount of time in milliseconds
+                            -- that has to pass before starting new render
+})
