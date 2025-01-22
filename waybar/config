@@ -36,16 +36,15 @@
     }
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-muted": "🔇",
-    "format-icons": ["🔈", "🔉", "🔊"],
+    "format": "[{volume}%VOL]",
+    "format-muted": "[🔇]",
     "on-click-right": "pavucontrol"
   },
   "hyprland/window": {
     "max-length": 128
   },
   "clock": {
-    "format": "{:%a %b %d %H:%M}",
+    "format": "<b>{:%a %b %d %H:%M}</b>",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "tray": {
@@ -54,7 +53,7 @@
   "custom/weather": {
     "exec": "~/.config/waybar/wittr.sh",
     "return-type": "json",
-    "format": "{}",
+    "format": "[{}]",
     "tooltip": true,
     "interval": 900
   },
